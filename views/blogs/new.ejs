@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <%- include("../partials/head") %>
+
+  </head>
+
+  <body class="create-body">
+
+    <%- include("../partials/navbar") %>
+
+    <div class="container-{breakpoint">
+      <div class="section-center clearfix">
+      <div class="text-center">
+        <h1 class="heading">Create New Blog Here</h1>
+      </div>
+      <br>
+      <form action="/blogs" method="post">
+        <div class="text-center mb-3">
+          <input type="text" placeholder="Title" name="title" />
+        </div>
+        
+        <div class="text-center mb-3">
+          <textarea
+            name="text"
+            cols="30"
+            rows="3"
+            placeholder="Description"
+          ></textarea>
+        </div>
+
+        <div class="text-center mb-3">
+          <input type="text" placeholder="Author" name="author" />
+        </div>
+
+        <div class="text-center mb-3">
+          <input type="text" placeholder="Image URL" name="img" />
+        </div>
+
+        <div class="text-center mb-3">
+          <input type="date" placeholder="Created Date" name="createdDate" />
+        </div>
+
+        <div class="text-center mb-3">
+          <input type="text" placeholder="category" name="category" />
+        </div>
+        <div class="d-grid col-6 mx-auto">
+        <button class="btn btn-success">Submit</button>
+        </div>
+      </form>
+    </div>
+    <%- include("../partials/footer")  %>
+    </div>
+  </body>
+</html>

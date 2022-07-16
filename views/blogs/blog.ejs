@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head") %>
+  </head>
+  <body class="blogs-body">
+    <%- include("../partials/navbar") %>
+
+    <div class="container-{breakpoint}">
+      <div class="section-center clearfix">
+      <h1><%= foundBlog.title %></h1>
+
+      <img src="<%= foundBlog.img %> " alt="" />
+      <p><%= foundBlog.text %></p>
+      <h6><%= foundBlog.author %></h6>
+      <h6><%= foundBlog.createdDate %></h6>
+      <h6><%= foundBlog.category %></h6>
+      <form action="/blogs/<%= foundBlog._id %>/edit">
+      
+        <button class="d-grid gap-2 button1 col-2">Edit</button>
+      
+      </form>
+
+      <form action="/blogs">
+        
+        <button class="d-grid gap-2 button2 col-2">Go Back</button>
+        
+      </form>
+      
+
+      <form
+        action="/blogs/<%= foundBlog._id %>?_method=delete"
+        method="post"
+      >
+        <button class="d-grid gap-2 button3 col-2">Delete</button>
+      </form>
+
+      <!-- <a href="/recepies/<%= foundBlog._id %>">Delete</a> -->
+      <hr />
+    </div>
+    <%- include("../partials/footer")  %>
+  </div>
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Roboto&family=Space+Grotesk:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --slantedText: "Roboto", cursive;
+  --primaryColor: rgb(0, 0, 0);
+  --secondaryColor: #fca311;
+  --mainDark: #ffffff;
+  --mainWhite: #fff;
+  --mainGrey: #e5e5e5;
+  --mainTransition: all 0.3s ease-in-out;
+  --letterSpacing: 0.5rem;
+}
+
+.home-body{
+  background-color: rgb(228, 227, 227);
+}
+
+
+/* Responsive Navbar */
+.navbar-brand {
+  padding: 0px 20px;
+  font-size: 15px;
+}
+
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover
+{
+color: #111;
+background: rgb(255, 183, 243);
+}
+
+
+/* Responsive Navbar */
+
+/* header */
+.header {
+  min-height: 100vh;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(182, 182, 182, 0.5)),
+    url("https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YmxvZyUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80") center/cover no-repeat fixed;
+  position:relative;
+}
+
+/* banner */
+.banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  letter-spacing: var(--letterSpacing);
+}
+
+.banner-subtitle {
+  font-size: 2rem;
+  font-family: var(--slantedText);
+  color: var(--primaryColor);
+  /* animation */
+  animation: blinker 5s ease-in-out 1;
+}
+.banner-title {
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  color: black;
+  margin-top: 2.5rem;
+  line-height: 1.1;
+  /* animation */
+  animation: blinker 5s ease-in-out 1;
+}
+.main-btn,
+.banner-btn {
+  display: inline-block;
+  background: var(--primaryColor);
+  text-transform: uppercase;
+  padding: 0.8rem 1.2rem;
+  color: var(--mainDark);
+  font-weight: bold;
+  outline: 0.2rem solid var(--primaryColor);
+  outline-offset: 4px;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: var(--mainTransition);
+}
+.main-btn:hover,
+.banner-btn:hover {
+  color: var(--mainWhite);
+  opacity: 0.7;
+}
+.banner-btn {
+  padding: 1.2rem 1.5rem;
+  /* animation */
+  animation: show 5s ease-in-out 1;
+}
+/* end  header */
+/* animations  */
+
+@keyframes show {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* end of animations  */
+
+/* about  */
+.about{
+  background-image: url('https://media.istockphoto.com/photos/live-chat-chatting-on-application-communication-picture-id690734180?b=1&k=20&m=690734180&s=170667a&w=0&h=1VY3GdOi-TacaqYS8TrtSmDwGAuho3z2NHffltMrcZQ=');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  
+}
+
+.about-img,
+.about-info {
+  padding: 2rem 0;
+}
+.about-picture-container {
+  background: var(--primaryColor);
+  border: 0.5rem solid var(--primaryColor);
+  border-radius: 1rem;
+  /* overflow */
+  overflow: hidden;
+}
+.about-picture {
+  width: 100%;
+  display: block;
+  transition: var(--mainTransition);
+}
+.about-picture-container:hover .about-picture {
+  opacity: 0.5;
+  transform: scale(1.2);
+}
+.about-text {
+  margin: 1rem 0;
+  max-width: 26rem;
+}
+
+/* globals */
+.section-center {
+  padding: 4rem 0;
+  width: 80vw;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.section-subtitle {
+  font-size: 4rem;
+  font-family: var(--slantedText);
+  letter-spacing: var(--letterSpacing);
+  text-transform: capitalize;
+  color: var(--primaryColor);
+  
+}
+.section-title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+/* Skills Section */
+
+.skills {
+    background: rgb(254, 255, 225);
+  }
+  .skill {
+    padding: 2.5rem 0;
+    text-align: center;
+    transition: var(--mainTransition);
+  }
+  .skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    transition: var(--mainTransition);
+    display: inline-block;
+  }
+  .skill-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: var(--letterSpacing);
+    margin-bottom: 1.5rem;
+    color: var(--primaryColor);
+    transition: var(--mainTransition);
+  }
+  .skill-text {
+    max-width: 13rem;
+    margin: 0 auto;
+  }
+  
+  .skill:hover {
+    background: var(--primaryColor);
+  }
+
+  .skill:hover .skill-title {
+    color: var(--mainWhite);
+  }
+  .skill:hover .skill-icon {
+    transform: translateY(-5px);
+  }
+
+  /* clearfix */
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.heading
+{
+  font-size: 4rem;
+  font-family: var(--slantedText);
+  letter-spacing: var(--letterSpacing);
+  text-transform: capitalize;
+  color: var(--primaryColor);
+  background-color: rgb(196, 197, 253);
+  border-style:dotted;
+  border-radius: 12px;
+  padding: 5px;
+}
+
+.recent-blog{
+  background-color: brown;
+}
+
+.card-img-top{
+  width: 100%;
+  height: 55vh;
+  object-fit: cover;
+    
+}
+
+.create-body{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD3Dn1o1aqNzyMe7FaeU_ubfVRni7erLx0qw&usqp=CAU");
+  background-attachment: fixed;
+  background-size: cover;
+  position:relative
+}
+
+.mb-3{
+  color: #fca311;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blogs-body{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD3Dn1o1aqNzyMe7FaeU_ubfVRni7erLx0qw&usqp=CAU");
+  background-attachment: fixed;
+  background-size: cover;
+  position:relative
+}
+
+.recent-blog{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD3Dn1o1aqNzyMe7FaeU_ubfVRni7erLx0qw&usqp=CAU");
+  background-attachment: fixed;
+  background-size: cover;
+  position:relative
+}
+
+.button1{
+  border-radius: 8px;
+  background-color: lightgoldenrodyellow;
+}
+
+.button2{
+  border-radius: 8px;
+  background-color: lightpink;
+}
+
+.button3{
+  border-radius: 8px;
+  background-color: lightgreen;
+}
+
+/* Footers */
+
+.footer{
+	background-color: rgb(0, 0, 0);
+    padding: 10px 0;
+
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #ebebeb;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #2b2424;
+	background-color: #ffffff;
+}
+
+.footer-text {
+  text-transform: uppercase;
+  color: var(--mainWhite);
+  letter-spacing: var(--letterSpacing);
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}

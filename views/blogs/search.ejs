@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <%- include("../partials/head") %>
+
+    <title>Search</title>
+
+</head>
+
+  <body class="create-body">
+
+    <%- include("../partials/navbar") %>
+    
+  <div class="container-{breakpoint}">
+    <div class="section-center clearfix">
+    <div class="text-center">
+      <h1 class="heading">Search Results</h1>
+    </div>
+    
+    <% for(let blog of searchBlog){ %>
+      
+      <h3>
+        <%= blog.title %>
+      </h3>
+      <img style="width: 500px;" src="<%= blog.img %> " alt="" />
+      <p>
+        <%= blog.text %>
+      </p>
+      <h6>
+        <%= blog.author %>
+      </h6>
+      <h6>
+        <%= blog.createdDate %>
+      </h6>
+      <h6>
+        <%= blog.category %>
+      </h6>
+      <a href="/blogs/search/<%= blog._id %>">Show Details</a>
+      <hr />
+    
+    </div>
+    <%- include("../partials/footer")  %>
+  </div>
+
+    <% } %>
+  
+</body>
+</html>
